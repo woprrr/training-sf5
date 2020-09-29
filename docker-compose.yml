@@ -12,6 +12,7 @@ services:
         container_name: php
         depends_on:
             - api-db
+            - blackfire
         env_file:
             - ./sf-api/.env
         # Comment out these volumes in production
@@ -31,6 +32,7 @@ services:
         container_name: sf-api
         depends_on:
             - php
+            - blackfire
         env_file:
             - ./sf-api/.env
         ports:
@@ -123,7 +125,8 @@ services:
 
     blackfire:
         image: blackfire/blackfire
-        ports: ["8707"]
+        ports:
+            - 8707:8707
         container_name: blackfire
         environment:
             BLACKFIRE_SERVER_ID: ed0bb126-ad75-4131-99a9-3dca7d8fde9c

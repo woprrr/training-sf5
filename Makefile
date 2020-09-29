@@ -67,6 +67,9 @@ generate-jwt-keys:
 	@docker-compose exec -T php openssl genrsa -out config/jwt/private.pem -aes256 -passout pass:70d709840f544f87e8fc1f6a50044b7d 4096
 	@docker-compose exec -T php openssl rsa -pubout -in config/jwt/private.pem -passin pass:70d709840f544f87e8fc1f6a50044b7d -out config/jwt/public.pem
 
+blackfire-run:
+	@docker-compose exec -T blackfire blackfire curl http://sf-api
+
 logs:
 	@docker-compose logs -f
 

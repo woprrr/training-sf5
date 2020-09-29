@@ -1,0 +1,677 @@
+build:
+  nodes:
+    php:
+      root_path: './sf-api'
+
+      project_setup:
+        override: true
+
+      dependencies:
+        override:
+          - composer install --no-interaction --no-scripts
+
+      environment:
+        php: 7.4
+
+      tests:
+        override:
+          - php-scrutinizer-run  --enable-security-analysis
+          - phpcs-run --report=checkstyle --warning-severity=6 --standard="vendor/escapestudios/symfony2-coding-standard/Symfony" --ignore="vendor,bin,public,tests,var,Kernel.php,Migrations,reports,config/bootstrap.php" .
+
+filter:
+  paths: ["./sf-api/src/*"]
+  excluded_paths:
+    - "./sf-api/tests/*"
+    - "./sf-api/src/DataFixtures/*"
+    - "./sf-api/src/Kernel.php"
+  dependency_paths:
+    - "./sf-api/node_modules/*"
+    - "./sf-api/vendor/*"
+
+checks:
+  php:
+    # Check SQL injection vulnerabilities.
+    sql_injection_vulnerabilities: true
+    # Check dependencies for security vulnerabilities.
+    security_vulnerabilities: true
+    # Check for return statements in constructors.
+    return_in_constructor: true
+    # Check that methods always have a scope defined (private, protected, etc.).
+    require_scope_for_methods: true
+    # Check that the PHP opening tag ("<?php") is the first string in a file.
+    require_php_tag_first: true
+    # Check types in property assignments.
+    property_assignments: true
+    # Check for common precedence mistakes in comparisons and bit operations.
+    precedence_mistakes: true
+    # Check for common precedence mistakes when assigning in condition.
+    precedence_in_conditions: true
+    # Check that doc comment types can be parsed (https://scrutinizer-ci.com/docs/tools/php/php-analyzer/guides/annotating_code).
+    parse_doc_comments: true
+    # Check that parameter names are unique.
+    parameter_non_unique: true
+    # Check that doc comments do not type-hint traits.
+    no_trait_type_hints: true
+    # Check that no short PHP opening tag ("<?") is used.
+    no_short_open_tag: true
+    # Check that no property has been declared on an interface.
+    no_property_on_interface: true
+    # Check that there are no missing implementations for abstract methods.
+    no_non_implemented_abstract_methods: true
+    # Check that "exit" is not used.
+    no_exit: true
+    # Check that "eval" is not used.
+    no_eval: true
+    # Check that errors are not suppressed.
+    no_error_suppression: true
+    # Check for forgotten debug code.
+    no_debug_code: true
+    # Check whether an argument is missing from a function/method call.
+    missing_arguments: true
+    # Check if a given method can be called on the given types.
+    method_calls_on_non_object: true
+    # Check that no non-existent class is used with the "instanceof" operator.
+    instanceof_class_exists: true
+    # Check that a foreach expression can be used as reference if necessary.
+    foreach_usable_as_reference: true
+    # Check that a foreach expression is traversable.
+    foreach_traversable: true
+    # Encourage use of the strict comparison operator (===) if result is ambiguous (https://www.php.net/manual/en/language.operators.comparison.php).
+    encourage_shallow_comparison: true
+    # Check for duplicated and similar code.
+    duplication: true
+    # Check for usage of deprecated code (types, methods, functions, etc.).
+    deprecated_code_usage: true
+    # Check for possible deadlocks in loops.
+    deadlock_detection_in_loops: true
+    # Check for comparisons that always yield the same result.
+    comparison_always_same_result: true
+    # Enable code rating for PHP code.
+    code_rating: true
+    # Check that imported variables in closures do not conflict with parameters.
+    closure_use_not_conflicting: true
+    # Check that closure uses are only overridden when imported by reference.
+    closure_use_modifiable: true
+    # Check that no non-existent class is used when catching exceptions.
+    catch_class_exists: true
+    # Call to different parent method.
+    call_to_parent_method: true
+    # Check that superglobals are not accessed.
+    avoid_superglobals: true
+    # Check that length-based functions are not executed in loop conditions.
+    avoid_length_functions_in_loops: true
+    # Check that Doctrine's entity manager is not injected.
+    avoid_entity_manager_injection: true
+    # Check that types (classes, interfaces, etc.) are not declared twice.
+    avoid_duplicate_types: true
+    # Check that a closing PHP tag ("?>") is never present.
+    avoid_closing_tag: true
+    # Check that properties exist on the accessed types (https://www.php.net/manual/en/language.oop5.properties.php).
+    verify_property_names: true
+    # Check that the scope from which properties/methods are accessed is valid (https://www.php.net/manual/en/language.oop5.visibility.php).
+    verify_access_scope_valid: true
+    # Check that arguments can be used as reference when one is expected.
+    verify_argument_usable_as_reference: true
+    uppercase_constants: true
+    # Check that a fallthrough in a switch is always commented.
+    switch_fallthrough_commented: true
+    spacing_of_function_arguments: true
+    spacing_around_non_conditional_operators: true
+    spacing_around_conditional_operators: true
+    space_after_cast: true
+    # Check for unused variable.
+    unused_variables: true
+    # Check for unused `private` properties.
+    unused_properties: true
+    # Check for unused parameters.
+    unused_parameters: true
+    # Check for unused `private` methods.
+    unused_methods: true
+    # Check for unreachable code.
+    unreachable_code: true
+    # Check whether methods/functions are called with too many arguments.
+    too_many_arguments: true
+    no_unnecessary_if: true
+    no_unnecessary_final_modifier: true
+    no_empty_statements: true
+    # [Automated Patch] Fix use statements.
+    fix_use_statements:
+      remove_unused: true
+      # Whether you would like multiple imports in one USE statement to be preserved, e.g. ``use A, B;``.
+      preserve_multiple: true
+      # Whether you would like to preserve blank lines between use statements.
+      preserve_blanklines: false
+      order_alphabetically: false
+    remove_trailing_whitespace: true
+    # Remove PHP closing tags eg: `?>`.
+    remove_php_closing_tag: true
+    # Remove extra empty lines.
+    remove_extra_empty_lines: true
+    fix_php_opening_tag: true
+    fix_linefeed: true
+    # Fix the file ending to always be an empty line feed.
+    fix_line_ending: true
+    fix_identation_4spaces: true
+    # [Automated Patch] Fix several errors in doc comments (wrong types, missing type annotations).
+    fix_doc_comments: true
+    avoid_useless_overridden_methods: true
+    # Check for calls to side effect-free methods where the return is not used.
+    useless_calls: true
+    single_namespace_per_use: true
+    scope_indentation:
+      spaces_per_level: '4'
+    # Check that local variables always exist when they are accessed.
+    variable_existence: true
+    # Check the types of @return doc comments (https://manual.phpdoc.org/HTMLSmartyConverter/HandS/phpDocumentor/tutorial_tags.return.pkg.html).
+    return_doc_comments: true
+    # Check the types of @param doc comments.
+    parameter_doc_comments: true
+    no_unnecessary_function_call_in_for_loop: true
+    # Check whether a boolean return value can be simplified.
+    simplify_boolean_return: true
+    # Check whether the return type is inferrable and ask for a @return comment if not.
+    return_doc_comment_if_not_inferrable: true
+    # Check that properties are named in camelCaps format.
+    properties_in_camelcaps: true
+    # Check that parameters are named in camelCaps format.
+    parameters_in_camelcaps: true
+    # Check whether parameter types are inferrable and ask for a @param comment if not.
+    param_doc_comment_if_not_inferrable: true
+    # Check that parameter names are not overwritten.
+    overriding_parameter: true
+    # Check that variable names are not too short.
+    no_short_variable_names:
+      minimum: '3'
+    # Check that method names are not too short.
+    no_short_method_names:
+      minimum: '3'
+    # Check that variable names are not too long.
+    no_long_variable_names:
+      maximum: '20'
+    # Check the naming of code elements (variables, properties, classes, etc.).
+    naming_conventions:
+      local_variable: '^[a-z][a-zA-Z0-9]*$'
+      abstract_class_name: ^Abstract|Factory$
+      utility_class_name: 'Utils?$'
+      constant_name: '^[A-Z][A-Z0-9]*(?:_[A-Z0-9]+)*$'
+      property_name: '^[a-z][a-zA-Z0-9]*$'
+      method_name: '^(?:[a-z]|__)[a-zA-Z0-9]*$'
+      parameter_name: '^[a-z][a-zA-Z0-9]*$'
+      interface_name: '^[A-Z][a-zA-Z0-9]*Interface$'
+      type_name: '^[A-Z][a-zA-Z0-9]*$'
+      exception_name: '^[A-Z][a-zA-Z0-9]*Exception$'
+      isser_method_name: '^(?:is|has|should|may|supports)'
+    # Check whether the types in doc comments can be made more specific.
+    more_specific_types_in_doc_comments: true
+    # Check that method contracts are kept.
+    check_method_contracts:
+      # Verify contracts on interfaces and abstract methods.
+      verify_interface_like_constraints: true
+      # Verify contracts declared by doc comments.
+      verify_documented_constraints: true
+      # Verify contracts inherited from parents.
+      verify_parent_constraints: true
+  javascript:
+    # Check to flag variables that may not be initalized in all cases.
+    var_sometimes_initialized: true
+    # Check to flag variables that are never initialized.
+    var_never_initialized: true
+    # Ensures that the results of typeof are compared against a valid string.
+    valid_typeof: true
+    # Check to flag comparisons to the value `NaN`.
+    use_isnan: true
+    # Check to flag comparisons to undefined that may be unsafe.
+    unsafe_undefined: true
+    # Checks whether a function inside a loop accesses variables mutated between iterations.
+    unsafe_mutable_variable_usage: true
+    # Checks your package.json against known security vulnerabilities.
+    nsp_vulnerabilities: true
+    # Check to flag use of with statement.
+    no_with: true
+    # Check to disallow use of void operator.
+    no_void: true
+    # Check to flag for the usage of var suggesting to use `let` or `const`.
+    no_var: true
+    # Check to flag use of variables before they are defined.
+    no_use_before_define: true
+    # Check to flag declared but unused variables.
+    no_unused_vars: true
+    # Check to flag declared but unused functions.
+    no_unused_function: true
+    # Flag expressions in statement position that do not side effect.
+    no_unused_expressions: true
+    # Check to flag declared but unused constants.
+    no_unused_const: true
+    # Check to flag assignments that are superseded in all possible execution paths.
+    no_unused_assignment: true
+    # Checks for unreachable code due to return, throws, break, and continue.
+    no_unreachable: true
+    # Check to flag when initializing to undefined.
+    no_undef_init: true
+    # Check to flag references to undeclared variables.
+    no_undef: true
+    # Disallow sparse arrays.
+    no_sparse_arrays: true
+    # Check to flag overwriting built-in types.
+    no_shadow_builtins: true
+    # Check to flag use of comma operator.
+    no_sequences: true
+    # Check to flag when return statement contains assignment.
+    no_return_assign: true
+    # Check to flag constants that were declared multiple times.
+    no_redeclared_const: true
+    # Check to flag when the same variable is declared more then once.
+    no_redeclare: true
+    # Disallow the use of process.exit().
+    no_process_exit: true
+    # Disallow string concatenation when using `__dirname` and `__filename`.
+    no_path_concat: true
+    # Check to flag assignment of a function parameter.
+    no_param_assign: true
+    # Check to flag when using constructor for wrapper objects.
+    no_new_wrappers: true
+    # Check to disallow use of new operator with the `require` function.
+    no_new_require: true
+    # Check to flag when using new Function.
+    no_new_func: true
+    # A rule to disallow negated left operands of the `in` operator.
+    no_negated_in_lhs: true
+    # Check to flag when re-assigning native objects.
+    no_native_reassign: true
+    # Check to flag assignment to a loop variable.
+    no_loop_var_assign: true
+    # Check to flag labels that are the same as an identifier.
+    no_label_var: true
+    # Validate strings passed to the RegExp constructor.
+    no_invalid_regexp: true
+    # Check that function declarations are in correct scopes.
+    no_inner_declarations: true
+    # Check to flag use of implied eval via setTimeout and setInterval.
+    no_implied_eval: true
+    # Check to flag if `undefined` is returned implicitly.
+    no_implicit_undefined_return: true
+    # Check to flag use of function declaration identifiers as variables.
+    no_func_assign: true
+    # Check to flag unnecessary bind calls.
+    no_extra_bind: true
+    # Check to flag adding properties to native object's prototypes.
+    no_extend_native: true
+    # Check to flag assignment of the exception parameter.
+    no_ex_assign: true
+    # Check to flag use of eval() statement.
+    no_eval: true
+    # Check to flag when label is not used for a loop or switch.
+    no_empty_label: true
+    # Check to flag the use of empty character classes in regular expressions.
+    no_empty_class: true
+    # Check to flag use of an empty block statement.
+    no_empty: true
+    # Check for unnecessary `else` clauses after an `if`.
+    no_else_return: true
+    # Check to flag use of duplicate keys in an object.
+    no_dupe_keys: true
+    # Check to flag when deleting variables.
+    no_delete_var: true
+    # Checks your code for forgotten debug code.
+    no_debugger: true
+    # Check to flag use constant conditions.
+    no_constant_condition: true
+    # Check to flag use of console object.
+    no_console: true
+    # Check to flag trailing commas in object literals.
+    no_comma_dangle: true
+    # Check to flag use of arguments.callee and arguments.caller.
+    no_caller: true
+    # Check to flag `bitwise` operators.
+    no_bitwise: true
+    # Disallow construction of dense arrays using the Array constructor.
+    no_array_constructor: true
+    # Check to flag when aliasing native objects.
+    no_alias_builtins: true
+    # Check to require `constructors` to start with a capital letter.
+    new_cap: true
+    # Checks whether parameters referred to in JSDoc actually exist in the code.
+    jsdoc_non_existent_params: true
+    # Checks that parameters in JSDoc are not documented twice.
+    jsdoc_no_duplicate_params: true
+    # Check to flag for-in loops without if statements inside.
+    guard_for_in: true
+    # Check to flag statements that use `!=` and `==` instead of `!==` and `===`.
+    eqeqeq: true
+    # Enables duplicate/similar code detection for Javascript.
+    duplicate_code: true
+    # Check to flag statements without curly braces.
+    curly: true
+    # Check to flag consistent return values.
+    consistent_return: true
+    # Enables code rating for Javascript code.
+    code_rating: true
+    # Check to flag unused parameters.
+    check_unused_parameters: true
+    # Check to flag creation of objects which are immediately discarded.
+    check_unused_object_creation: true
+    # Check to flag calls to object members where the return value is discarded.
+    check_unused_member_calls: true
+    # Check to flag return which have no effect.
+    check_unnecessary_return: true
+    # Check to flag continue which have no effect.
+    check_unnecessary_continue: true
+    # Check try statements.
+    check_try_statement: true
+    # Check to flag if functions are called with too many arguments.
+    check_too_many_arguments: true
+    # Check to flag switch statements with no default case.
+    check_switch_no_default: true
+    # Check to flag switch statements with no cases.
+    check_switch_default_only: true
+    # Check to flag switch statements where the default case is not listed last.
+    check_switch_default_not_last: true
+    # Check to flag switch statements where cases may overlap.
+    check_switch_ambiguous_test: true
+    # Check to flag disembodied loops.
+    check_loop_no_body: true
+    # Check to flag for loops where loop variables are initialized but not used in the test.
+    check_for_loops_test: true
+tools:
+  # Runs the PHP MESS DETECTOR (https://scrutinizer-ci.com/docs/tools/php/mess-detector/)
+  php_mess_detector:
+    config:
+      code_size_rules:
+        cyclomatic_complexity: true
+        npath_complexity: true
+        excessive_method_length: true
+        excessive_class_length: true
+        excessive_parameter_list: true
+        excessive_public_count: true
+        too_many_fields: true
+        too_many_methods: true
+        excessive_class_complexity: true
+      design_rules:
+        number_of_class_children: true
+        depth_of_inheritance: true
+        coupling_between_objects: true
+      unused_code_rules:
+        unused_local_variable: true
+        unused_private_method: true
+        unused_formal_parameter: true
+      naming_rules:
+        short_variable: true
+        long_variable: true
+        short_method: true
+        boolean_method_name: true
+      controversial_rules:
+        camel_case_class_name: true
+        camel_case_property_name: true
+        camel_case_method_name: true
+        camel_case_parameter_name: true
+        camel_case_variable_name: true
+  # Runs the PHP CS Fixer (http://cs.sensiolabs.org/) (https://scrutinizer-ci.com/docs/tools/php/cs-fixer/)
+  php_cs_fixer:
+    config:
+      level: all
+      fixers:
+        unused_use: true
+        phpdoc_params: true
+        braces: true
+        # Check PHP closing tags eg: `?>`.
+        php_closing_tag: true
+  # PHP Analyzer (https://scrutinizer-ci.com/docs/tools/php/php-analyzer/)
+  php_analyzer:
+    config:
+      suspicious_code:
+        enabled: true
+        overriding_parameter: true
+        overriding_closure_use: true
+        parameter_closure_use_conflict: true
+        parameter_multiple_times: true
+        non_existent_class_in_instanceof_check: true
+        non_existent_class_in_catch_clause: true
+        # Check that no result of functions which always return null is assigned.
+        assignment_of_null_return: true
+        non_commented_switch_fallthrough: true
+        # Check that an empty catch block is always commented.
+        non_commented_empty_catch_block: true
+        # Check that private class members are not overridden in child classes.
+        overriding_private_members: true
+        # Check for conflicting imported classes with local classes.
+        use_statement_alias_conflict: true
+        precedence_in_condition_assignment: true
+      verify_php_doc_comments:
+        enabled: true
+        parameters: true
+        return: true
+        suggest_more_specific_types: true
+        ask_for_return_if_not_inferrable: true
+        ask_for_param_type_annotation: true
+      loops_must_use_braces:
+        enabled: true
+      simplify_boolean_return:
+        enabled: true
+      phpunit_checks:
+        enabled: true
+      reflection_fixes:
+        enabled: true
+      use_statement_fixes:
+        enabled: true
+        order_alphabetically: true
+        remove_unused: true
+        preserve_multiple: false
+        preserve_blanklines: false
+      # Checks parameters of method calls if they expect a reference.
+      parameter_reference_check:
+        enabled: false
+      checkstyle:
+        enabled: false
+        # Check that there is no trailing whitespace on lines.
+        no_trailing_whitespace: true
+        naming:
+          enabled: true
+          local_variable: '^[a-z][a-zA-Z0-9]*$'
+          abstract_class_name: ^Abstract|Factory$
+          utility_class_name: 'Utils?$'
+          constant_name: '^[A-Z][A-Z0-9]*(?:_[A-Z0-9]+)*$'
+          property_name: '^[a-z][a-zA-Z0-9]*$'
+          method_name: '^(?:[a-z]|__)[a-zA-Z0-9]*$'
+          parameter_name: '^[a-z][a-zA-Z0-9]*$'
+          interface_name: '^[A-Z][a-zA-Z0-9]*Interface$'
+          type_name: '^[A-Z][a-zA-Z0-9]*$'
+          exception_name: '^[A-Z][a-zA-Z0-9]*Exception$'
+          isser_method_name: '^(?:is|has|should|may|supports)'
+      unreachable_code:
+        enabled: false
+      check_access_control:
+        enabled: false
+      typo_checks:
+        enabled: false
+      check_variables:
+        enabled: false
+      check_calls:
+        enabled: true
+        too_many_arguments: true
+        missing_argument: true
+        # Check whether the passed argument types are compatible with the expected types (Allowed Values: "disabled", "lenient", "strict").
+        argument_type_checks: lenient
+      dead_assignments:
+        enabled: false
+      check_usage_context:
+        enabled: true
+        foreach:
+          value_as_reference: true
+          traversable: true
+      reflection_checks:
+        enabled: true
+      # Checks Common Precedence Mistakes
+      precedence_checks:
+        enabled: true
+        assignment_in_condition: true
+        comparison_of_bit_result: true
+      basic_semantic_checks:
+        enabled: true
+      # Disabled unused code.
+      unused_code:
+        enabled: true
+      # Detecting Usage of Deprecated Code (https://scrutinizer-ci.com/blog/detecting-usage-of-deprecated-code-with-php-analyzer)
+      deprecation_checks:
+        enabled: true
+      useless_function_calls:
+        enabled: true
+      metrics_lack_of_cohesion_methods:
+        enabled: true
+      metrics_coupling:
+        enabled: true
+        stable_code:
+          namespace_prefixes: {  }
+          classes: {  }
+      doctrine_parameter_binding:
+        enabled: true
+      doctrine_entity_manager_injection:
+        enabled: true
+      # Check for injection of the Symfony request object.
+      symfony_request_injection:
+        enabled: true
+      doc_comment_fixes:
+        enabled: true
+  # SensioLabs Security Checker (https://github.com/sensiolabs/security-checker) (https://scrutinizer-ci.com/docs/tools/php/security-advisory-checker/)
+  sensiolabs_security_checker: true
+  # PHPLOC - PHP Lines of code (Analyzes the size and structure of a PHP project).
+  php_loc:
+    enabled: true
+    excluded_dirs:
+      - 'tests'
+      - 'vendor'
+  # PHP PDepend (https://scrutinizer-ci.com/docs/tools/php/pdepend/)
+  # Analyzes the size and structure of a PHP project
+  php_pdepend:
+    enabled:              true
+    excluded_dirs:
+      - 'tests'
+      - 'vendor'
+  # PHP Code Similarity Analyzer (https://scrutinizer-ci.com/docs/tools/php/code-similarity-analyzer/)
+  php_sim:
+    min_mass: 30 # Defaults to 16
+  php_changetracking: true
+  # PHP Copy/Paste Detector
+  php_cpd:
+    enabled: true
+    excluded_dirs:
+      - 'tests'
+      - 'vendor'
+  # External Code Coverage (https://scrutinizer-ci.com/docs/tools/external-code-coverage/)
+#  external_code_coverage:
+#    timeout: 600 # Wait 10 minutes for results, if results are ready before scrutinizer stop waiting & continue
+#    runs: 3 # Merge results for backend (TU + TF), frontend (TU) jobs
+# Project Coding style (https://scrutinizer-ci.com/docs/configuration/coding_style)
+coding_style:
+  php:
+    indentation:
+      general:
+        use_tabs: false
+        size: 4
+      switch:
+        indent_case: true
+    spaces:
+      general:
+        linefeed_character: newline
+      before_parentheses:
+        function_declaration: false
+        closure_definition: false
+        function_call: false
+        if: true
+        for: true
+        while: true
+        switch: true
+        catch: true
+        array_initializer: false
+      around_operators:
+        assignment: true
+        logical: true
+        equality: true
+        relational: true
+        bitwise: true
+        additive: true
+        multiplicative: true
+        shift: true
+        unary_additive: false
+        concatenation: false
+        negation: false
+      before_left_brace:
+        class: true
+        function: true
+        if: true
+        else: true
+        for: true
+        while: true
+        do: true
+        switch: true
+        try: true
+        catch: true
+        finally: true
+      before_keywords:
+        else: true
+        while: true
+        catch: true
+        finally: true
+      within:
+        brackets: false
+        array_initializer: false
+        grouping: false
+        function_call: false
+        function_declaration: false
+        if: false
+        for: false
+        while: false
+        switch: false
+        catch: false
+        type_cast: false
+      ternary_operator:
+        before_condition: true
+        after_condition: true
+        before_alternative: true
+        after_alternative: true
+        in_short_version: false
+      other:
+        before_comma: false
+        after_comma: true
+        before_semicolon: false
+        after_semicolon: true
+        after_type_cast: true
+    braces:
+      classes_functions:
+        class: new-line
+        function: new-line
+        closure: undefined
+      if:
+        opening: undefined
+        always: true
+        else_on_new_line: true
+      for:
+        opening: undefined
+        always: true
+      while:
+        opening: undefined
+        always: true
+      do_while:
+        opening: undefined
+        always: true
+        while_on_new_line: false
+      switch:
+        opening: undefined
+      try:
+        opening: undefined
+        catch_on_new_line: false
+        finally_on_new_line: false
+    upper_lower_casing:
+      keywords:
+        general: lower
+      constants:
+        true_false_null: lower
+
+build_failure_conditions:
+  - 'elements.rating(<= F).exists' # No classes/methods with a rating of D or worse
+  - 'elements.rating(<= D).new.exists' # No new classes/methods with a rating of D or worse
+  - 'issues.label("coding-style").new.exists' # No new coding style issues allowed
+  - 'issues.label("coding-style").new.count > 5' # More than 5 new coding style issues
+  - 'issues.severity(>= MAJOR).new.exists' # New issues of major or higher severity (available options : CRITICAL, MAJOR, MINOR, INFO)
+  - 'project.metric("scrutinizer.quality", < 7)' # Code Quality Rating drops below 7
+#    - 'project.metric_change("scrutinizer.test_coverage", < -0.005)' # Code Coverage decreased by more than 0.5%
+#    - 'project.metric("scrutinizer.test_coverage", < 0.70)' # Code Coverage drops below 70%

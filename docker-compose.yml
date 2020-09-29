@@ -1,0 +1,138 @@
+version: '3'
+
+services:
+    php:
+        build:
+            context: ./sf-api
+            args:
+                PHP_VERSION: "7.4"
+                COMPOSER_VERSION: "1.10.13"
+                APCU_VERSION: "5.1.18"
+                XDEBUG_VERSION: "2.9.2"
+        container_name: php
+        depends_on:
+            - api-db
+        env_file:
+            - ./sf-api/.env
+        # Comment out these volumes in production
+        volumes:
+            - ./sf-api:/app/sf-api:rw,delegated
+            # If you develop on Linux, comment out the following volumes to just use bind-mounted project directory from host
+        environment:
+            # If you develop on Windows change this to remote_host=docker.for.win.localhost
+            # If you develop on Linux change this to remote_host=172.17.0.1
+            XDEBUG_CONFIG: "remote_host=docker.for.mac.localhost idekey=IDE_XDEBUG"
+            PHP_IDE_CONFIG: "serverName=docker-server"
+
+    sf-api:
+        build:
+            context: ./sf-api
+            dockerfile: Dockerfile.nginx
+        container_name: sf-api
+        depends_on:
+            - php
+        env_file:
+            - ./sf-api/.env
+        ports:
+            - "8080:80"
+        volumes:
+            - ./sf-api/public:/app/sf-api/public:ro
+            - ./sf-api/public/build:/app/sf-api/build:ro
+
+    cache-proxy:
+        build:
+            context: ./sf-api/
+            dockerfile: ./Dockerfile.varnish
+        container_name: cache-proxy
+        depends_on:
+            - sf-api
+        # Comment out this volume in production
+        volumes:
+            - ./sf-api/docker/varnish/conf:/etc/varnish:ro
+        ports:
+            - "8081:80"
+
+    api-db:
+        # In production, you may want to use a managed database service
+        image: postgres:12.4
+        container_name: api-db
+        environment:
+            - POSTGRES_DB=sf-api
+            - POSTGRES_USER=symfony
+            - POSTGRES_PASSWORD=symfony
+        volumes:
+            - db-data:/var/lib/postgresql/data:rw
+            - ./sf-api/docker/postgres/initdb_uuid_ossp.sh:/docker-entrypoint-initdb.d/initdb_uuid_ossp.sh
+        ports:
+            - "5432:5432"
+
+    h2-proxy:
+        # Don't use this proxy in prod
+        build:
+            context: ./h2-proxy
+            dockerfile: ./Dockerfile
+        container_name: h2-proxy
+        depends_on:
+            - sf-api
+            - cache-proxy
+        ports:
+            - "80:80"
+            - "443:443"
+            - "8443:8443"
+
+    mailcatcher:
+        restart: always
+        container_name: mailcatcher
+        image: dockage/mailcatcher:0.6.5
+        ports:
+            - "1080:1080"
+            - "1025:1025"
+
+    rabbitmq:
+        image: rabbitmq:management-alpine
+        container_name: rabbitmp
+        environment:
+            RABBITMQ_DEFAULT_USER: admin
+            RABBITMQ_DEFAULT_PASS: admin
+        ports:
+            - "5672:5672"
+            - "15672:15672"
+        restart: always
+        volumes:
+            - rabbitmq-data:/var/lib/rabbitmq
+
+    redis:
+        container_name: redis
+        image: redis:alpine
+        ports:
+            - "6379:6379"
+        volumes:
+            - redis-data:/data
+
+    redis-commander:
+        container_name: redis-commander
+        image: rediscommander/redis-commander:latest
+        environment:
+            - REDIS_HOSTS=local:redis:6379
+            - HTTP_USER=root
+            - HTTP_PASSWORD=root
+        ports:
+            - 8084:8081
+        depends_on:
+            - redis
+
+    blackfire:
+        image: blackfire/blackfire
+        ports: ["8707"]
+        container_name: blackfire
+        environment:
+            BLACKFIRE_SERVER_ID: ed0bb126-ad75-4131-99a9-3dca7d8fde9c
+            BLACKFIRE_SERVER_TOKEN: 6db03d66126bed8078827d8791038c6b84c7154249e987e4ca808383e030c91d
+            BLACKFIRE_CLIENT_ID: cc5bb7a3-8a4a-45d4-bd0b-efab0d546a05
+            BLACKFIRE_CLIENT_TOKEN: ef8062e7b586e23d5ef3025113ad154b05de7fe2918bfcbcd8873a9f2cb1f757
+
+volumes:
+    db-data: {}
+    redis-data: {}
+    rabbitmq-data:
+        driver: local

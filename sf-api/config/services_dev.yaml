@@ -1,2 +1,7 @@
 parameters:
     cache_adapter: cache.adapter.redis
+
+services:
+    Symfony\Bridge\Monolog\Handler\ElasticsearchLogstashHandler:
+        autowire: false
+        arguments: ["%env(resolve:ELASTICSEARCH_DSN)%"]

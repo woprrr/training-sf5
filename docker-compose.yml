@@ -13,6 +13,7 @@ services:
         depends_on:
             - api-db
             - blackfire
+            - elasticsearch
         env_file:
             - ./sf-api/.env
         # Comment out these volumes in production
@@ -33,6 +34,7 @@ services:
         depends_on:
             - php
             - blackfire
+            - elasticsearch
         env_file:
             - ./sf-api/.env
         ports:
@@ -134,8 +136,78 @@ services:
             BLACKFIRE_CLIENT_ID: cc5bb7a3-8a4a-45d4-bd0b-efab0d546a05
             BLACKFIRE_CLIENT_TOKEN: ef8062e7b586e23d5ef3025113ad154b05de7fe2918bfcbcd8873a9f2cb1f757
 
+    elasticsearch:
+        build:
+            context: elasticsearch/
+            args:
+                ELK_VERSION: 7.4.2
+        volumes:
+            - type: bind
+              source: ./elasticsearch/config/elasticsearch.yml
+              target: /usr/share/elasticsearch/config/elasticsearch.yml
+              read_only: true
+            - type: volume
+              source: elasticsearch
+              target: /usr/share/elasticsearch/data
+        ports:
+            - "9200:9200"
+            - "9300:9300"
+        environment:
+            ES_JAVA_OPTS: "-Xmx256m -Xms256m"
+            ELASTIC_PASSWORD: changeme
+        networks:
+            - elk
+
+    logstash:
+        build:
+            context: logstash/
+            args:
+                ELK_VERSION: 7.4.2
+        volumes:
+            - type: bind
+              source: ./logstash/config/logstash.yml
+              target: /usr/share/logstash/config/logstash.yml
+              read_only: true
+            - type: bind
+              source: ./logstash/pipeline
+              target: /usr/share/logstash/pipeline
+              read_only: true
+        ports:
+            - "5000:5000"
+            - "9600:9600"
+        environment:
+            LS_JAVA_OPTS: "-Xmx256m -Xms256m"
+        networks:
+            - elk
+        depends_on:
+            - elasticsearch
+
+    kibana:
+        build:
+            context: kibana/
+            args:
+                ELK_VERSION: 7.4.2
+        volumes:
+            - type: bind
+              source: ./kibana/config/kibana.yml
+              target: /usr/share/kibana/config/kibana.yml
+              read_only: true
+        ports:
+            - "5601:5601"
+        environment:
+            - ELASTICSEARCH_URL=http://elasticsearch:9200
+        networks:
+            - elk
+        depends_on:
+            - elasticsearch
+
+networks:
+    elk:
+        driver: bridge
+
 volumes:
     db-data: {}
     redis-data: {}
+    elasticsearch:
     rabbitmq-data:
         driver: local

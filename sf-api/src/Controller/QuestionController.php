@@ -6,6 +6,7 @@ use App\Markdown\MarkdownHelper;
 use Symfony\{Bundle\FrameworkBundle\Controller\AbstractController,
     Component\HttpFoundation\Response,
     Component\Routing\Annotation\Route};
+use Http\Discovery\Exception\NotFoundException;
 use Twig\Environment;
 
 class QuestionController extends AbstractController

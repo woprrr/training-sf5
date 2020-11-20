@@ -12,6 +12,7 @@ services:
         container_name: php
         depends_on:
             - api-db
+            - blackfire
         env_file:
             - ./sf-api/.env
         # Comment out these volumes in production
@@ -31,12 +32,14 @@ services:
         container_name: sf-api
         depends_on:
             - php
+            - blackfire
         env_file:
             - ./sf-api/.env
         ports:
             - "8080:80"
         volumes:
             - ./sf-api/public:/app/sf-api/public:ro
+            - ./sf-api/public/build:/app/sf-api/build:ro
 
     cache-proxy:
         build:
@@ -100,9 +103,30 @@ services:
         volumes:
             - rabbitmq-data:/var/lib/rabbitmq
 
+    redis:
+        container_name: redis
+        image: redis:alpine
+        ports:
+            - "6379:6379"
+        volumes:
+            - redis-data:/data
+
+    redis-commander:
+        container_name: redis-commander
+        image: rediscommander/redis-commander:latest
+        environment:
+            - REDIS_HOSTS=local:redis:6379
+            - HTTP_USER=root
+            - HTTP_PASSWORD=root
+        ports:
+            - 8084:8081
+        depends_on:
+            - redis
+
     blackfire:
         image: blackfire/blackfire
-        ports: ["8707"]
+        ports:
+            - 8707:8707
         container_name: blackfire
         environment:
             BLACKFIRE_SERVER_ID: ed0bb126-ad75-4131-99a9-3dca7d8fde9c
@@ -110,7 +134,18 @@ services:
             BLACKFIRE_CLIENT_ID: cc5bb7a3-8a4a-45d4-bd0b-efab0d546a05
             BLACKFIRE_CLIENT_TOKEN: ef8062e7b586e23d5ef3025113ad154b05de7fe2918bfcbcd8873a9f2cb1f757
 
+    elk:
+        image: willdurand/elk
+        ports:
+            - 81:80
+        volumes:
+            - ./sf-api/docker/elk/logstash:/etc/logstash
+            - ./sf-api/docker/elk/logstash/patterns:/opt/logstash/patterns
+        volumes_from:
+            - php
+            - sf-api
 volumes:
     db-data: {}
+    redis-data: {}
     rabbitmq-data:
         driver: local

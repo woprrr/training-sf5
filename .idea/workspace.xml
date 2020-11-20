@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e86e6a54-149d-4d28-bfbd-bc515b635554" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/elasticsearch/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/elasticsearch/config/elasticsearch.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kibana/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kibana/config/kibana.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logstash/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logstash/config/logstash.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sf-api/.env" beforeDir="false" afterPath="$PROJECT_DIR$/sf-api/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sf-api/.env.local" beforeDir="false" afterPath="$PROJECT_DIR$/sf-api/.env.local" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sf-api/config/packages/dev/monolog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/sf-api/config/packages/dev/monolog.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sf-api/config/services_dev.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/sf-api/config/services_dev.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sf-api/docker/elk/logstash/logstash.conf" beforeDir="false" afterPath="$PROJECT_DIR$/logstash/pipeline/logstash.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sf-api/docker/elk/logstash/patterns/default.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sf-api/docker/elk/logstash/patterns/nginx.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sf-api/docker/elk/logstash/patterns/symfony.conf" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="composer.json" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1kY2dj4fieenszHmUbDYrl507UV" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="add_unversioned_files" value="$PROJECT_DIR$/sf-api/var/log/dev.log" />
+    <property name="ignore_missing_gitignore" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/logstash/pipeline" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/logstash/pipeline" />
+      <recent name="$PROJECT_DIR$/sf-api/docker" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/sf-api/docker" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e86e6a54-149d-4d28-bfbd-bc515b635554" name="Default Changelist" comment="" />
+      <created>1605863295516</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1605863295516</updated>
+      <workItem from="1605863299227" duration="5818000" />
+      <workItem from="1605871459872" duration="10704000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="500" height="443" key="SwitcherDM" timestamp="1605888787336">
+      <screen x="0" y="23" width="1440" height="804" />
+    </state>
+    <state width="500" height="443" key="SwitcherDM/0.23.1440.804@0.23.1440.804" timestamp="1605888787336" />
+    <state width="500" height="445" key="SwitcherDM/0.23.1440.808@0.23.1440.808" timestamp="1605880828138" />
+    <state x="100" y="123" width="1240" height="608" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1605871278941">
+      <screen x="0" y="23" width="1440" height="808" />
+    </state>
+    <state x="100" y="123" width="1240" height="608" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.23.1440.808@0.23.1440.808" timestamp="1605871278941" />
+    <state x="422" y="35" width="596" height="783" key="find.popup" timestamp="1605875549466">
+      <screen x="0" y="23" width="1440" height="808" />
+    </state>
+    <state x="422" y="35" width="596" height="783" key="find.popup/0.23.1440.808@0.23.1440.808" timestamp="1605875549466" />
+    <state x="385" y="155" width="670" height="676" key="search.everywhere.popup" timestamp="1605876763961">
+      <screen x="0" y="23" width="1440" height="808" />
+    </state>
+    <state x="385" y="155" width="670" height="676" key="search.everywhere.popup/0.23.1440.808@0.23.1440.808" timestamp="1605876763961" />
+  </component>
+</project>

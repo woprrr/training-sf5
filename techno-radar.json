@@ -287,6 +287,13 @@
       "description": "RabbitMQ is the most widely deployed open source message broker."
     },
     {
+        "name": "AWS SQS",
+        "ring": "adopt",
+        "quadrant": "platforms",
+        "isNew": "TRUE",
+        "description": "Amazon Simple Queue Service (Amazon SQS) is a distributed message queuing service introduced by Amazon.com as a beta in late 2004, and generally available in mid 2006."
+    },
+    {
       "name": "Redis",
       "ring": "adopt",
       "quadrant": "tools",
@@ -399,6 +406,13 @@
       "description": "PWS / v12"
     },
     {
+        "name": "PHP 7.2.8",
+        "ring": "adopt",
+        "quadrant": "languages & frameworks",
+        "isNew": "FALSE",
+        "description": "V12 api standalone (distribution)"
+      },
+    {
         "name": "PHP 7.4.26",
         "ring": "adopt",
         "quadrant": "languages & frameworks",
@@ -466,8 +480,15 @@
       "ring": "adopt",
       "quadrant": "languages & frameworks",
       "isNew": "FALSE",
-      "description": "We continue to see teams run into trouble using JSF ..."
+      "description": "Meyclub, V12 (api distribution)"
     },
+    {
+        "name": "Symfony 4.4.40",
+        "ring": "adopt",
+        "quadrant": "languages & frameworks",
+        "isNew": "FALSE",
+        "description": "V12"
+      },
     {
       "name": "Shell",
       "ring": "adopt",

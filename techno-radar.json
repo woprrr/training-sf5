@@ -217,6 +217,41 @@
         "description": "Test Driven Development."
     },
     {
+        "name": "BDD",
+        "ring": "adopt",
+        "quadrant": "Techniques",
+        "isNew": "FALSE",
+        "description": "Behavior-Driven Development."
+    },
+    {
+        "name": "ATDD",
+        "ring": "trial",
+        "quadrant": "Techniques",
+        "isNew": "FALSE",
+        "description": "Acceptance Test-Driven Development."
+    },
+    {
+        "name": "SPA By Default",
+        "ring": "adopt",
+        "quadrant": "Techniques",
+        "isNew": "FALSE",
+        "description": "Acceptance Test-Driven Development."
+    },
+    {
+        "name": "Microservices for backend",
+        "ring": "adopt",
+        "quadrant": "Techniques",
+        "isNew": "FALSE",
+        "description": "Acceptance Test-Driven Development."
+    },
+    {
+        "name": "Continuous Delivery",
+        "ring": "adopt",
+        "quadrant": "Techniques",
+        "isNew": "FALSE",
+        "description": "Meyclub"
+    },
+    {
       "name": "Apache",
       "ring": "adopt",
       "quadrant": "platforms",
@@ -245,7 +280,7 @@
       "description": "Serveur GraphQL, version 3.*"
     },
     {
-      "name": "RabbgitMQ",
+      "name": "RabbitMQ",
       "ring": "adopt",
       "quadrant": "platforms",
       "isNew": "FALSE",
@@ -254,7 +289,7 @@
     {
       "name": "Redis",
       "ring": "adopt",
-      "quadrant": "languages & frameworks",
+      "quadrant": "tools",
       "isNew": "FALSE",
       "description": "The open source, in-memory data store used by millions of developers as a database, cache, streaming engine, and message broker."
     },
@@ -361,7 +396,7 @@
       "ring": "adopt",
       "quadrant": "languages & frameworks",
       "isNew": "FALSE",
-      "description": "PWS"
+      "description": "PWS / v12"
     },
     {
         "name": "PHP 7.4.26",
@@ -383,6 +418,13 @@
         "quadrant": "languages & frameworks",
         "isNew": "FALSE",
         "description": "Emys"
+    },
+    {
+        "name": "PHP 7.4.32",
+        "ring": "adopt",
+        "quadrant": "languages & frameworks",
+        "isNew": "FALSE",
+        "description": "V12"
     },
     {
       "name": "PHP 8.1",

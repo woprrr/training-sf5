@@ -196,11 +196,25 @@
         "description": "Filebeat is a log shipper belonging to the Beats family."
     },
     {
+        "name": "Clamav",
+        "ring": "adopt",
+        "quadrant": "tools",
+        "isNew": "FALSE",
+        "description": "ClamAV® is an open-source antivirus engine for detecting trojans, viruses, malware & other malicious threats."
+    },
+    {
         "name": "Monkey",
         "ring": "adopt",
         "quadrant": "tools",
         "isNew": "FALSE",
         "description": "Legacy"
+    },
+    {
+        "name": "Wiremock",
+        "ring": "adopt",
+        "quadrant": "tools",
+        "isNew": "FALSE",
+        "description": "V12"
     },
     {
       "name": "ElasticSearch",
@@ -459,7 +473,7 @@
       "ring": "adopt",
       "quadrant": "languages & frameworks",
       "isNew": "FALSE",
-      "description": "We continue to see teams run into trouble using JSF ..."
+      "description": "V12 Mysql 5"
     },
     {
       "name": "Symfony 5.4",

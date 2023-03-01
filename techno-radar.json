@@ -1,0 +1,436 @@
+[
+    {
+      "name": "Composer",
+      "ring": "adopt",
+      "quadrant": "tools",
+      "isNew": "FALSE",
+      "description": "Although the idea of dependency management ..."
+    },
+    {
+      "name": "NPM",
+      "ring": "adopt",
+      "quadrant": "tools",
+      "isNew": "FALSE",
+      "description": "npm is the world's largest software registry. Open source developers from every continent use npm to share and borrow packages, and many organizations use npm to manage private development as well."
+    },
+    {
+      "name": "Symfony Insight",
+      "ring": "adopt",
+      "quadrant": "tools",
+      "isNew": "FALSE",
+      "description": "Although the idea of dependency management ..."
+    },
+    {
+      "name": "Blackfire",
+      "ring": "adopt",
+      "quadrant": "tools",
+      "isNew": "FALSE",
+      "description": "Find issues in production, development and test/staging. Detect poor code patterns. A tool for PHP developers to continuously track, improve and validate performance."
+    },
+    {
+      "name": "React Testing Library",
+      "ring": "adopt",
+      "quadrant": "tools",
+      "isNew": "FALSE",
+      "description": "Builds on top of DOM Testing Library by adding APIs for working with React components."
+    },
+    {
+      "name": "Gitlab",
+      "ring": "adopt",
+      "quadrant": "tools",
+      "isNew": "FALSE",
+      "description": "Although the idea of dependency management ..."
+    },
+    {
+      "name": "Kubernetes",
+      "ring": "adopt",
+      "quadrant": "tools",
+      "isNew": "FALSE",
+      "description": "Open-source system for automating deployment, scaling, and management of containerized applications."
+    },
+    {
+      "name": "Docker",
+      "ring": "adopt",
+      "quadrant": "tools",
+      "isNew": "FALSE",
+      "description": " Platform designed to help developers build, share, and run modern applications. We handle the tedious setup, so you can focus on the code."
+    },
+    {
+      "name": "Docker Compose",
+      "ring": "adopt",
+      "quadrant": "tools",
+      "isNew": "FALSE",
+      "description": "Tool for defining and running multi-container Docker applications. With Compose, you use a YAML file to configure your application's services"
+    },
+    {
+      "name": "Storybook",
+      "ring": "adopt",
+      "quadrant": "tools",
+      "isNew": "FALSE",
+      "description": "Storybook is a frontend workshop for building UI components and pages in isolation. Thousands of teams use it for UI development, testing, and documentation. It’s open source and free."
+    },
+    {
+      "name": "Kibana",
+      "ring": "adopt",
+      "quadrant": "tools",
+      "isNew": "FALSE",
+      "description": "Although the idea of dependency management ..."
+    },
+    {
+        "name": "PHP code sniffer",
+        "ring": "adopt",
+        "quadrant": "tools",
+        "isNew": "FALSE",
+        "description": "Although the idea of dependency management ..."
+    },
+    {
+        "name": "PHP code sniffer Fixer",
+        "ring": "adopt",
+        "quadrant": "tools",
+        "isNew": "FALSE",
+        "description": "Although the idea of dependency management ..."
+    },
+    {
+        "name": "YamlLint",
+        "ring": "adopt",
+        "quadrant": "tools",
+        "isNew": "FALSE",
+        "description": "Although the idea of dependency management ..."
+    },
+    {
+        "name": "PhpLint",
+        "ring": "adopt",
+        "quadrant": "tools",
+        "isNew": "FALSE",
+        "description": "Although the idea of dependency management ..."
+    },
+    {
+        "name": "LintConfig",
+        "ring": "adopt",
+        "quadrant": "tools",
+        "isNew": "FALSE",
+        "description": "Although the idea of dependency management ..."
+    },
+    {
+        "name": "PHPStan",
+        "ring": "adopt",
+        "quadrant": "tools",
+        "isNew": "FALSE",
+        "description": "A real SMTP server for local testing."
+      },
+      {
+        "name": "ADR",
+        "ring": "adopt",
+        "quadrant": "tools",
+        "isNew": "FALSE",
+        "description": "A real SMTP server for local testing."
+      },
+    {
+      "name": "MailCatcher",
+      "ring": "adopt",
+      "quadrant": "tools",
+      "isNew": "FALSE",
+      "description": "A real SMTP server for local testing."
+    },
+    {
+      "name": "ADR",
+      "ring": "adopt",
+      "quadrant": "tools",
+      "isNew": "FALSE",
+      "description": "A real SMTP server for local testing."
+    },
+    {
+        "name": "Git Prehook",
+        "ring": "adopt",
+        "quadrant": "tools",
+        "isNew": "FALSE",
+        "description": "The pre-commit hook is run first, before you even type in a commit message. It's used to inspect the snapshot that's about to be committed."
+      },
+    {
+        "name": "Terraform",
+        "ring": "adopt",
+        "quadrant": "tools",
+        "isNew": "FALSE",
+        "description": "Terraform is an open-source infrastructure as code software tool that enables you to safely and predictably create, change, and improve infrastructure."
+    },
+    {
+        "name": "AWS",
+        "ring": "adopt",
+        "quadrant": "tools",
+        "isNew": "FALSE",
+        "description": "TODO details all services we use with Guillaume Bory"
+    },
+    {
+      "name": "Capistrano",
+      "ring": "adopt",
+      "quadrant": "tools",
+      "isNew": "FALSE",
+      "description": "Edge Router (reverse proxy) for docker routing."
+    },
+    {
+      "name": "Selenium",
+      "ring": "adopt",
+      "quadrant": "tools",
+      "isNew": "FALSE",
+      "description": "Library for instrumentalize browser (Selenium WebDriver)."
+    },
+    {
+      "name": "Traefik",
+      "ring": "adopt",
+      "quadrant": "tools",
+      "isNew": "FALSE",
+      "description": "(Local MAC only)"
+    },
+    {
+      "name": "Doctrine",
+      "ring": "adopt",
+      "quadrant": "tools",
+      "isNew": "FALSE",
+      "description": "Doctrine ORM is an object-relational mapper for PHP 7.1+ that provides transparent persistence for PHP objects."
+    },
+    {
+        "name": "FileBeat",
+        "ring": "adopt",
+        "quadrant": "tools",
+        "isNew": "FALSE",
+        "description": "Filebeat is a log shipper belonging to the Beats family."
+    },
+    {
+        "name": "Monkey",
+        "ring": "adopt",
+        "quadrant": "tools",
+        "isNew": "FALSE",
+        "description": "Legacy"
+    },
+    {
+      "name": "ElasticSearch",
+      "ring": "adopt",
+      "quadrant": "tools",
+      "isNew": "FALSE",
+      "description": "Although the idea of dependency management ..."
+    },
+    {
+        "name": "TDD",
+        "ring": "adopt",
+        "quadrant": "Techniques",
+        "isNew": "FALSE",
+        "description": "Test Driven Development."
+    },
+    {
+      "name": "Apache",
+      "ring": "adopt",
+      "quadrant": "platforms",
+      "isNew": "FALSE",
+      "description": "Apache webServer"
+    },
+    {
+      "name": "NGINX",
+      "ring": "adopt",
+      "quadrant": "platforms",
+      "isNew": "FALSE",
+      "description": "Apache webServer"
+    },
+    {
+      "name": "HAPROXY",
+      "ring": "adopt",
+      "quadrant": "platforms",
+      "isNew": "FALSE",
+      "description": "HAProxy is a free, very fast and reliable reverse-proxy offering high availability, load balancing, and proxying for TCP and HTTP-based applications."
+    },
+    {
+      "name": "ApolloServer",
+      "ring": "adopt",
+      "quadrant": "platforms",
+      "isNew": "FALSE",
+      "description": "Serveur GraphQL, version 3.*"
+    },
+    {
+      "name": "RabbgitMQ",
+      "ring": "adopt",
+      "quadrant": "platforms",
+      "isNew": "FALSE",
+      "description": "RabbitMQ is the most widely deployed open source message broker."
+    },
+    {
+      "name": "Redis",
+      "ring": "adopt",
+      "quadrant": "languages & frameworks",
+      "isNew": "FALSE",
+      "description": "The open source, in-memory data store used by millions of developers as a database, cache, streaming engine, and message broker."
+    },
+    {
+      "name": "NodeJS",
+      "ring": "adopt",
+      "quadrant": "languages & frameworks",
+      "isNew": "FALSE",
+      "description": "Utilisé par l'application GraphQL qui sert de gateway et par les applications front pour la partie ServerSideRendering (SSR), version 16.18"
+    },
+    {
+        "name": "Javascript",
+        "ring": "adopt",
+        "quadrant": "languages & frameworks",
+        "isNew": "FALSE",
+        "description": "Legacy"
+    },
+    {
+        "name": "Twig",
+        "ring": "adopt",
+        "quadrant": "languages & frameworks",
+        "isNew": "FALSE",
+        "description": "Legacy"
+    },
+    {
+        "name": "CSS",
+        "ring": "adopt",
+        "quadrant": "languages & frameworks",
+        "isNew": "FALSE",
+        "description": "Legacy"
+    },
+    {
+        "name": "HTML",
+        "ring": "adopt",
+        "quadrant": "languages & frameworks",
+        "isNew": "FALSE",
+        "description": ""
+    },
+    {
+        "name": "Gherkin",
+        "ring": "adopt",
+        "quadrant": "languages & frameworks",
+        "isNew": "FALSE",
+        "description": "Gherkin is a language used to define tests."
+    },
+    {
+      "name": "TypeScript",
+      "ring": "adopt",
+      "quadrant": "languages & frameworks",
+      "isNew": "FALSE",
+      "description": "TypeScript is a strongly typed programming language that builds on JavaScript, giving you better tooling at any scale., version 4.9"
+    },
+    {
+      "name": "React",
+      "ring": "adopt",
+      "quadrant": "languages & frameworks",
+      "isNew": "FALSE",
+      "description": "..."
+    },
+    {
+      "name": "NextJS",
+      "ring": "adopt",
+      "quadrant": "languages & frameworks",
+      "isNew": "FALSE",
+      "description": "Framework React pour les applications front, version 13.*"
+    },
+    {
+      "name": "NestJS",
+      "ring": "adopt",
+      "quadrant": "languages & frameworks",
+      "isNew": "FALSE",
+      "description": "A progressive Node.js framework for building efficient, reliable and scalable server-side applications."
+    },
+    {
+      "name": "JEST",
+      "ring": "adopt",
+      "quadrant": "languages & frameworks",
+      "isNew": "FALSE",
+      "description": "JavaScript testing framework built on top of Jasmine[2] and maintained by Meta (formerly Facebook). It was designed and built by Christoph Nakazawa with a focus on simplicity and support for large web applications"
+    },
+    {
+      "name": "Behat",
+      "ring": "adopt",
+      "quadrant": "languages & frameworks",
+      "isNew": "FALSE",
+      "description": "Behat is an open source Behavior-Driven Development framework for PHP. Version 3.4"
+    },
+    {
+      "name": "CucumberJS",
+      "ring": "adopt",
+      "quadrant": "languages & frameworks",
+      "isNew": "FALSE",
+      "description": "tool for running automated tests written in plain language. Because they're written in plain language, they can be read by anyone on your team. Because they can be read by anyone, you can use them to help improve communication, collaboration and trust on your team."
+    },
+    {
+      "name": "Cypress",
+      "ring": "adopt",
+      "quadrant": "languages & frameworks",
+      "isNew": "FALSE",
+      "description": "Fast, Easy & Reliable Testing For Anything That Runs In a Browser. Get Started For Free! Built So That Testing & Development Can Happen Simultaneously."
+    },
+    {
+      "name": "PHP 7.1",
+      "ring": "adopt",
+      "quadrant": "languages & frameworks",
+      "isNew": "FALSE",
+      "description": "PWS"
+    },
+    {
+        "name": "PHP 7.4.26",
+        "ring": "adopt",
+        "quadrant": "languages & frameworks",
+        "isNew": "FALSE",
+        "description": "Skynet"
+    },
+    {
+        "name": "PHP 7.4.27",
+        "ring": "adopt",
+        "quadrant": "languages & frameworks",
+        "isNew": "FALSE",
+        "description": "Config Devis"
+    },
+    {
+        "name": "PHP 7.4.30",
+        "ring": "adopt",
+        "quadrant": "languages & frameworks",
+        "isNew": "FALSE",
+        "description": "Emys"
+    },
+    {
+      "name": "PHP 8.1",
+      "ring": "adopt",
+      "quadrant": "languages & frameworks",
+      "isNew": "FALSE",
+      "description": "We continue to see teams run into trouble using JSF ..."
+    },
+    {
+      "name": "Api Platform 2.7",
+      "ring": "adopt",
+      "quadrant": "languages & frameworks",
+      "isNew": "FALSE",
+      "description": "API Platform is a powerful yet easy to use full stack framework dedicated to API-driven projects and implementing the Jamstack architecture."
+    },
+    {
+      "name": "Mysql",
+      "ring": "adopt",
+      "quadrant": "languages & frameworks",
+      "isNew": "FALSE",
+      "description": "We continue to see teams run into trouble using JSF ..."
+    },
+    {
+      "name": "Symfony 5.4",
+      "ring": "adopt",
+      "quadrant": "languages & frameworks",
+      "isNew": "FALSE",
+      "description": "We continue to see teams run into trouble using JSF ..."
+    },
+    {
+        "name": "PostScript",
+        "ring": "adopt",
+        "quadrant": "languages & frameworks",
+        "isNew": "FALSE",
+        "description": "PostScript (PS) is a page description language in the electronic publishing and desktop publishing realm. LEGACY / HM"
+    },
+    {
+      "name": "Symfony 3.4",
+      "ring": "adopt",
+      "quadrant": "languages & frameworks",
+      "isNew": "FALSE",
+      "description": "We continue to see teams run into trouble using JSF ..."
+    },
+    {
+      "name": "Shell",
+      "ring": "adopt",
+      "quadrant": "languages & frameworks",
+      "isNew": "FALSE",
+      "description": "Scripts de déploiement BPM/HM/MEYCLUB pour la QA"
+    }
+  ]

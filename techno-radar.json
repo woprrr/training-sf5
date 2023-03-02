@@ -220,7 +220,7 @@
         "name": "Wiremock",
         "ring": "adopt",
         "quadrant": "tools",
-        "isNew": "refresh_writeup",
+        "isNew": "FALSE",
         "description": "V12"
     },
     {

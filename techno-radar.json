@@ -357,6 +357,90 @@
         "description": "Attraqt Fredhopper Discovery Platform. The leading enterprise AI search, merchandising and personalization solution."
     },
     {
+        "name": "Meyclub Voyage",
+        "ring": "adopt",
+        "quadrant": "platforms",
+        "isNew": "TRUE",
+        "description": "Orchestra"
+    },
+    {
+        "name": "RedMarket",
+        "ring": "adopt",
+        "quadrant": "platforms",
+        "isNew": "TRUE",
+        "description": "(MarketPlace)."
+    },
+    {
+        "name": "CheetahMail",
+        "ring": "adopt",
+        "quadrant": "platforms",
+        "isNew": "TRUE",
+        "description": "(Meyclub)."
+    },
+    {
+        "name": "Jira",
+        "ring": "adopt",
+        "quadrant": "platforms",
+        "isNew": "TRUE",
+        "description": ""
+    },
+    {
+        "name": "Redmine",
+        "ring": "adopt",
+        "quadrant": "platforms",
+        "isNew": "TRUE",
+        "description": ""
+    },
+    {
+        "name": "Confluence",
+        "ring": "adopt",
+        "quadrant": "platforms",
+        "isNew": "TRUE",
+        "description": ""
+    },
+    {
+        "name": "Teams",
+        "ring": "adopt",
+        "quadrant": "platforms",
+        "isNew": "TRUE",
+        "description": ""
+    },
+    {
+        "name": "Slack",
+        "ring": "adopt",
+        "quadrant": "platforms",
+        "isNew": "TRUE",
+        "description": ""
+    },
+    {
+        "name": "Easiware",
+        "ring": "adopt",
+        "quadrant": "platforms",
+        "isNew": "TRUE",
+        "description": "(Meyclub)."
+    },
+    {
+        "name": "TinyClues",
+        "ring": "adopt",
+        "quadrant": "platforms",
+        "isNew": "TRUE",
+        "description": "(Meyclub)."
+    },
+    {
+        "name": "JobScheduler",
+        "ring": "adopt",
+        "quadrant": "platforms",
+        "isNew": "TRUE",
+        "description": "JS7 JobScheduler est un ordonnanceur open source qui permet à une entreprise d'ordonnancer ses travaux d'informations et d'automatiser ses processus."
+    },
+    {
+        "name": "AB tasty",
+        "ring": "adopt",
+        "quadrant": "platforms",
+        "isNew": "TRUE",
+        "description": "AB Tasty est une plateforme all-in-one qui permet d'analyser les parcours utilisateurs et d'agir directement sur leur expérience de navigation via l'A/B."
+    },
+    {
         "name": "Payzen",
         "ring": "adopt",
         "quadrant": "platforms",

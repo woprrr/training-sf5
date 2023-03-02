@@ -294,13 +294,6 @@
         "description": "Behavior-Driven Development."
     },
     {
-        "name": "ATDD",
-        "ring": "trial",
-        "quadrant": "Techniques",
-        "isNew": "FALSE",
-        "description": "Acceptance Test-Driven Development."
-    },
-    {
         "name": "SPA By Default",
         "ring": "adopt",
         "quadrant": "Techniques",

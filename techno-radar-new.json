@@ -252,6 +252,13 @@
       "description": "ServiceNav est une plateforme SaaS spécialisée dans le monitoring des réseaux, de l'infrastructure informatique, du cloud et des applications."
     },
     {
+        "name": "SonarQube",
+        "ring": "trial",
+        "quadrant": "platforms",
+        "isNew": "TRUE",
+        "description": "Getting early security feedback during code review is your opportunity to learn & grow. Write clean code with SonarQube automatically detecting vulnerabilities."
+    },
+    {
       "name": "ELK Stack",
       "ring": "adopt",
       "quadrant": "platforms",

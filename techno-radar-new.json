@@ -245,6 +245,13 @@
       "description": "Apache webServer"
     },
     {
+        "name": "Mule Gateway",
+        "ring": "assess",
+        "quadrant": "platforms",
+        "isNew": "TRUE",
+        "description": "Mule Runtime includes an embedded Mule Gateway. Using this gateway, any user can, for example, apply a basic authentication policy on top of a Mule application, enrich an incoming/outgoing message, or add any other complex capability to an API without having to write any code."
+    },
+    {
       "name": "ServiceNav",
       "ring": "adopt",
       "quadrant": "platforms",

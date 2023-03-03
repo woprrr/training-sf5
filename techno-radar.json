@@ -117,8 +117,8 @@
         "quadrant": "tools",
         "isNew": "FALSE",
         "description": "A real SMTP server for local testing."
-      },
-      {
+    },
+    {
         "name": "ADR",
         "ring": "adopt",
         "quadrant": "tools",
@@ -255,7 +255,7 @@
         "name": "TDD",
         "ring": "adopt",
         "quadrant": "Techniques",
-        "isNew": "FALSE",
+        "isNew": "TRUE",
         "description": "Test Driven Development."
     },
     {
@@ -269,7 +269,7 @@
         "name": "Domain-Driven Design",
         "ring": "adopt",
         "quadrant": "Techniques",
-        "isNew": "FALSE",
+        "isNew": "TRUE",
         "description": "Domain-driven design (DDD) is a major software design approach, focusing on modeling software to match a domain according to input from that domain's experts."
     },
     {
@@ -288,16 +288,16 @@
     },
     {
         "name": "BDD",
-        "ring": "adopt",
+        "ring": "trial",
         "quadrant": "Techniques",
-        "isNew": "FALSE",
+        "isNew": "TRUE",
         "description": "Behavior-Driven Development."
     },
     {
         "name": "SPA By Default",
         "ring": "adopt",
         "quadrant": "Techniques",
-        "isNew": "FALSE",
+        "isNew": "TRUE",
         "description": "Acceptance Test-Driven Development."
     },
     {
@@ -309,14 +309,14 @@
     },
     {
         "name": "Continuous Delivery",
-        "ring": "adopt",
+        "ring": "assess",
         "quadrant": "Techniques",
-        "isNew": "FALSE",
+        "isNew": "TRUE",
         "description": "Meyclub"
     },
     {
       "name": "Apache",
-      "ring": "adopt",
+      "ring": "hold",
       "quadrant": "platforms",
       "isNew": "FALSE",
       "description": "Apache webServer"
@@ -325,7 +325,7 @@
       "name": "NGINX",
       "ring": "adopt",
       "quadrant": "platforms",
-      "isNew": "FALSE",
+      "isNew": "TRUE",
       "description": "Apache webServer"
     },
     {
@@ -339,7 +339,7 @@
       "name": "ApolloServer",
       "ring": "adopt",
       "quadrant": "platforms",
-      "isNew": "FALSE",
+      "isNew": "TRUE",
       "description": "Serveur GraphQL, version 3.*"
     },
     {
@@ -351,7 +351,7 @@
     },
     {
         "name": "AWS SQS",
-        "ring": "adopt",
+        "ring": "hold",
         "quadrant": "platforms",
         "isNew": "TRUE",
         "description": "Amazon Simple Queue Service (Amazon SQS) is a distributed message queuing service introduced by Amazon.com as a beta in late 2004, and generally available in mid 2006."
@@ -360,49 +360,49 @@
         "name": "Fredhopper",
         "ring": "adopt",
         "quadrant": "platforms",
-        "isNew": "TRUE",
+        "isNew": "FALSE",
         "description": "Attraqt Fredhopper Discovery Platform. The leading enterprise AI search, merchandising and personalization solution."
     },
     {
         "name": "Meyclub Voyage",
         "ring": "adopt",
         "quadrant": "platforms",
-        "isNew": "TRUE",
+        "isNew": "FALSE",
         "description": "Orchestra"
     },
     {
         "name": "RedMarket",
         "ring": "adopt",
         "quadrant": "platforms",
-        "isNew": "TRUE",
+        "isNew": "FALSE",
         "description": "(MarketPlace)."
     },
     {
         "name": "CheetahMail",
         "ring": "adopt",
         "quadrant": "platforms",
-        "isNew": "TRUE",
+        "isNew": "FALSE",
         "description": "(Meyclub)."
     },
     {
         "name": "Jira",
         "ring": "adopt",
         "quadrant": "platforms",
-        "isNew": "TRUE",
+        "isNew": "FALSE",
         "description": ""
     },
     {
         "name": "Redmine",
         "ring": "adopt",
         "quadrant": "platforms",
-        "isNew": "TRUE",
+        "isNew": "FALSE",
         "description": ""
     },
     {
         "name": "Confluence",
         "ring": "adopt",
         "quadrant": "platforms",
-        "isNew": "TRUE",
+        "isNew": "FALSE",
         "description": ""
     },
     {
@@ -416,49 +416,49 @@
         "name": "Slack",
         "ring": "adopt",
         "quadrant": "platforms",
-        "isNew": "TRUE",
+        "isNew": "FALSE",
         "description": ""
     },
     {
         "name": "Easiware",
         "ring": "adopt",
         "quadrant": "platforms",
-        "isNew": "TRUE",
+        "isNew": "FALSE",
         "description": "(Meyclub)."
     },
     {
         "name": "TinyClues",
         "ring": "adopt",
         "quadrant": "platforms",
-        "isNew": "TRUE",
+        "isNew": "FALSE",
         "description": "(Meyclub)."
     },
     {
         "name": "JobScheduler",
         "ring": "adopt",
         "quadrant": "platforms",
-        "isNew": "TRUE",
+        "isNew": "FALSE",
         "description": "JS7 JobScheduler est un ordonnanceur open source qui permet à une entreprise d'ordonnancer ses travaux d'informations et d'automatiser ses processus."
     },
     {
         "name": "AB tasty",
         "ring": "adopt",
         "quadrant": "platforms",
-        "isNew": "TRUE",
+        "isNew": "FALSE",
         "description": "AB Tasty est une plateforme all-in-one qui permet d'analyser les parcours utilisateurs et d'agir directement sur leur expérience de navigation via l'A/B."
     },
     {
         "name": "Payzen",
         "ring": "adopt",
         "quadrant": "platforms",
-        "isNew": "TRUE",
+        "isNew": "FALSE",
         "description": "Pour votre site e-commerce ou pour recevoir des paiements à distance."
     },
     {
         "name": "Paybox",
         "ring": "adopt",
         "quadrant": "platforms",
-        "isNew": "TRUE",
+        "isNew": "FALSE",
         "description": "Découvrez nos solutions Paybox. Verifone e-commerce opère et exploite un service de paiement."
     },
     {

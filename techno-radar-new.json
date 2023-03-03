@@ -1,0 +1,499 @@
+[
+    {
+      "name": "Composer",
+      "ring": "adopt",
+      "quadrant": "tools",
+      "isNew": "FALSE",
+      "description": "Although the idea of dependency management ..."
+    },
+    {
+      "name": "NPM",
+      "ring": "adopt",
+      "quadrant": "tools",
+      "isNew": "FALSE",
+      "description": "npm is the world's largest software registry. Open source developers from every continent use npm to share and borrow packages, and many organizations use npm to manage private development as well."
+    },
+    {
+      "name": "Symfony Insight",
+      "ring": "adopt",
+      "quadrant": "tools",
+      "isNew": "FALSE",
+      "description": "Although the idea of dependency management ..."
+    },
+    {
+      "name": "Material UI",
+      "ring": "adopt",
+      "quadrant": "tools",
+      "isNew": "TRUE",
+      "description": "MUI offers a comprehensive suite of UI tools to help you ship new features faster. Start with Material UI, our fully-loaded component library."
+    },
+    {
+      "name": "ESlint",
+      "ring": "adopt",
+      "quadrant": "tools",
+      "isNew": "TRUE",
+      "description": "ESLint is an open source project that helps you find and fix problems with your JavaScript code."
+    },
+    {
+      "name": "Blackfire",
+      "ring": "adopt",
+      "quadrant": "tools",
+      "isNew": "FALSE",
+      "description": "Find issues in production, development and test/staging. Detect poor code patterns. A tool for PHP developers to continuously track, improve and validate performance."
+    },
+    {
+      "name": "React Testing Library",
+      "ring": "adopt",
+      "quadrant": "tools",
+      "isNew": "FALSE",
+      "description": "Builds on top of DOM Testing Library by adding APIs for working with React components."
+    },
+    {
+      "name": "Gitlab",
+      "ring": "adopt",
+      "quadrant": "tools",
+      "isNew": "FALSE",
+      "description": "Although the idea of dependency management ..."
+    },
+    {
+      "name": "Kubernetes",
+      "ring": "adopt",
+      "quadrant": "tools",
+      "isNew": "TRUE",
+      "description": "Open-source system for automating deployment, scaling, and management of containerized applications."
+    },
+    {
+      "name": "Docker",
+      "ring": "adopt",
+      "quadrant": "tools",
+      "isNew": "FALSE",
+      "description": " Platform designed to help developers build, share, and run modern applications. We handle the tedious setup, so you can focus on the code."
+    },
+    {
+      "name": "Docker Compose",
+      "ring": "adopt",
+      "quadrant": "tools",
+      "isNew": "FALSE",
+      "description": "Tool for defining and running multi-container Docker applications. With Compose, you use a YAML file to configure your application's services"
+    },
+    {
+      "name": "Storybook",
+      "ring": "adopt",
+      "quadrant": "tools",
+      "isNew": "TRUE",
+      "description": "Storybook is a frontend workshop for building UI components and pages in isolation. Thousands of teams use it for UI development, testing, and documentation. It’s open source and free."
+    },
+    {
+      "name": "Graphana",
+      "ring": "trial",
+      "quadrant": "tools",
+      "isNew": "FALSE",
+      "description": "Grafana is a multi-platform open source analytics and interactive visualization web application. It provides charts, graphs, and alerts for the web when connected to supported data sources."
+    },
+    {
+        "name": "ADR",
+        "ring": "adopt",
+        "quadrant": "tools",
+        "isNew": "TRUE",
+        "description": "A real SMTP server for local testing."
+    },
+    {
+        "name": "Log4Brain",
+        "ring": "adopt",
+        "quadrant": "tools",
+        "isNew": "TRUE",
+        "description": "Log4brains is a docs-as-code knowledge base for your development and infrastructure projects. It enables you to log Architecture Decision Records (ADR)."
+    },
+    {
+        "name": "Terraform",
+        "ring": "adopt",
+        "quadrant": "tools",
+        "isNew": "FALSE",
+        "description": "Terraform is an open-source infrastructure as code software tool that enables you to safely and predictably create, change, and improve infrastructure."
+    },
+    {
+        "name": "AWS CloudWatch",
+        "ring": "adopt",
+        "quadrant": "tools",
+        "isNew": "TRUE",
+        "description": "Amazon CloudWatch is a component of Amazon Web Services that provides monitoring for AWS resources and the customer applications running on the Amazon."
+    },
+    {
+      "name": "AWS ECR",
+      "ring": "adopt",
+      "quadrant": "tools",
+      "isNew": "TRUE",
+      "description": "Amazon Elastic Compute Cloud (EC2) is a part of Amazon.com's cloud-computing platform, Amazon Web Services (AWS), that allows users to rent virtual computers on which to run their own computer applications."
+    },
+    {
+      "name": "Amazon EKS",
+      "ring": "adopt",
+      "quadrant": "tools",
+      "isNew": "FALSE",
+      "description": "Amazon EKS est un service Kubernetes géré qui exécute des Kubernetes dans le cloud AWS et dans les centres de données sur site."
+    },
+    {
+      "name": "Amazon S3",
+      "ring": "adopt",
+      "quadrant": "tools",
+      "isNew": "FALSE",
+      "description": "Amazon S3 est un service de stockage d'objets qui stocke les données en tant qu'objets dans des compartiments."
+    },
+    {
+      "name": "Ansible",
+      "ring": "adopt",
+      "quadrant": "tools",
+      "isNew": "FALSE",
+      "description": "Ansible is an open source community project sponsored by Red Hat, it's the simplest way to automate IT."
+    },
+    {
+      "name": "Traefik",
+      "ring": "trial",
+      "quadrant": "tools",
+      "isNew": "TRUE",
+      "description": "to Simulate Gateway"
+    },
+    {
+      "name": "Doctrine",
+      "ring": "adopt",
+      "quadrant": "tools",
+      "isNew": "FALSE",
+      "description": "Doctrine ORM is an object-relational mapper for PHP 7.1+ that provides transparent persistence for PHP objects."
+    },
+    {
+        "name": "Postman",
+        "ring": "adopt",
+        "quadrant": "tools",
+        "isNew": "TRUE",
+        "description": "V12"
+    },
+    {
+        "name": "NGINX App Protect",
+        "ring": "adopt",
+        "quadrant": "tools",
+        "isNew": "TRUE",
+        "description": "A modern app‑security solution that works seamlessly in DevOps environments, helping you deliver secure apps from code to customer."
+    },
+    {
+        "name": "HELM",
+        "ring": "adopt",
+        "quadrant": "tools",
+        "isNew": "TRUE",
+        "description": "Helm helps you manage Kubernetes applications — Helm Charts help you define, install, and upgrade even the most complex Kubernetes application."
+    },
+    {
+        "name": "TDD",
+        "ring": "adopt",
+        "quadrant": "Techniques",
+        "isNew": "TRUE",
+        "description": "Test Driven Development."
+    },
+    {
+        "name": "Peer programming",
+        "ring": "adopt",
+        "quadrant": "Techniques",
+        "isNew": "FALSE",
+        "description": "Pair programming is a software development technique in which two programmers work together at one workstation. One, the driver, writes code while the other, the observer or navigator, reviews each line of code as it is typed in. The two programmers switch roles frequently."
+    },
+    {
+        "name": "Domain-Driven Design",
+        "ring": "adopt",
+        "quadrant": "Techniques",
+        "isNew": "TRUE",
+        "description": "Domain-driven design (DDD) is a major software design approach, focusing on modeling software to match a domain according to input from that domain's experts."
+    },
+    {
+        "name": "Agile Methodology",
+        "ring": "adopt",
+        "quadrant": "Techniques",
+        "isNew": "FALSE",
+        "description": "In software development, agile practices include requirements discovery and solutions improvement through the collaborative effort of self-organizing and cross-functional teams with their customer(s)/end user(s), adaptive planning, evolutionary development, early delivery, continual improvement, and flexible responses to changes in requirements, capacity, and understanding of the problems to be solved."
+    },
+    {
+        "name": "BDD",
+        "ring": "adopt",
+        "quadrant": "Techniques",
+        "isNew": "TRUE",
+        "description": "Behavior-Driven Development."
+    },
+    {
+        "name": "SPA By Default",
+        "ring": "adopt",
+        "quadrant": "Techniques",
+        "isNew": "TRUE",
+        "description": "Acceptance Test-Driven Development."
+    },
+    {
+        "name": "Microservices for backend",
+        "ring": "adopt",
+        "quadrant": "Techniques",
+        "isNew": "TRUE",
+        "description": ""
+    },
+    {
+        "name": "Continuous Delivery",
+        "ring": "adopt",
+        "quadrant": "Techniques",
+        "isNew": "TRUE",
+        "description": ""
+    },
+    {
+      "name": "NGINX",
+      "ring": "adopt",
+      "quadrant": "platforms",
+      "isNew": "TRUE",
+      "description": "Apache webServer"
+    },
+    {
+      "name": "ServiceNav",
+      "ring": "adopt",
+      "quadrant": "platforms",
+      "isNew": "FALSE",
+      "description": "ServiceNav est une plateforme SaaS spécialisée dans le monitoring des réseaux, de l'infrastructure informatique, du cloud et des applications."
+    },
+    {
+      "name": "ELK Stack",
+      "ring": "adopt",
+      "quadrant": "platforms",
+      "isNew": "TRUE",
+      "description": "The Elastic Stack is a group of open source products from Elastic designed to help users take data from any type of source and in any format, and search, analyze and visualize that data in real time."
+    },
+    {
+      "name": "ApolloServer",
+      "ring": "adopt",
+      "quadrant": "platforms",
+      "isNew": "TRUE",
+      "description": "Serveur GraphQL, version 3.*"
+    },
+    {
+      "name": "RabbitMQ",
+      "ring": "adopt",
+      "quadrant": "platforms",
+      "isNew": "FALSE",
+      "description": "RabbitMQ is the most widely deployed open source message broker."
+    },
+    {
+        "name": "Fredhopper",
+        "ring": "trial",
+        "quadrant": "platforms",
+        "isNew": "TRUE",
+        "description": "Attraqt Fredhopper Discovery Platform. The leading enterprise AI search, merchandising and personalization solution."
+    },
+    {
+        "name": "Jira Cloud",
+        "ring": "trial",
+        "quadrant": "platforms",
+        "isNew": "TRUE",
+        "description": ""
+    },
+    {
+      "name": "Redis",
+      "ring": "adopt",
+      "quadrant": "tools",
+      "isNew": "FALSE",
+      "description": "The open source, in-memory data store used by millions of developers as a database, cache, streaming engine, and message broker."
+    },
+    {
+        "name": "Redis Sentinel",
+        "ring": "hold",
+        "quadrant": "tools",
+        "isNew": "TRUE",
+        "description": "Redis Sentinel provides high availability for Redis when not using Redis Cluster."
+      },
+    {
+        "name": "Apache JMeter",
+        "ring": "adopt",
+        "quadrant": "tools",
+        "isNew": "FALSE",
+        "description": "The Apache JMeter™ application is open source software, a 100% pure Java application designed to load test functional behavior and measure performance. It was originally designed for testing Web Applications but has since expanded to other test functions."
+    },
+    {
+      "name": "Argo CD",
+      "ring": "adopt",
+      "quadrant": "tools",
+      "isNew": "TRUE",
+      "description": "Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes."
+    },
+    {
+      "name": "Gatling",
+      "ring": "assess",
+      "quadrant": "platforms",
+      "isNew": "TRUE",
+      "description": "Gatling is a load testing tool for web applications, designed for DevOps and Continuous Integration."
+    },
+    {
+      "name": "NodeJS",
+      "ring": "adopt",
+      "quadrant": "languages & frameworks",
+      "isNew": "TRUE",
+      "description": "Utilisé par l'application GraphQL qui sert de gateway et par les applications front pour la partie ServerSideRendering (SSR), version 16.18"
+    },
+    {
+        "name": "Flutter",
+        "ring": "adopt",
+        "quadrant": "languages & frameworks",
+        "isNew": "FALSE",
+        "description": "Flutter is an open source framework by Google for building beautiful, natively compiled, multi-platform applications from a single codebase."
+    },
+    {
+        "name": "Dart",
+        "ring": "adopt",
+        "quadrant": "languages & frameworks",
+        "isNew": "FALSE",
+        "description": "Dart is a client-optimized language for fast apps on any platform."
+    },
+    {
+        "name": "Javascript",
+        "ring": "hold",
+        "quadrant": "languages & frameworks",
+        "isNew": "FALSE",
+        "description": ""
+    },
+    {
+        "name": "Gherkin",
+        "ring": "adopt",
+        "quadrant": "languages & frameworks",
+        "isNew": "FALSE",
+        "description": "Gherkin is a language used to define tests."
+    },
+    {
+      "name": "TypeScript",
+      "ring": "adopt",
+      "quadrant": "languages & frameworks",
+      "isNew": "TRUE",
+      "description": "TypeScript is a strongly typed programming language that builds on JavaScript, giving you better tooling at any scale., version 4.9"
+    },
+    {
+      "name": "React",
+      "ring": "adopt",
+      "quadrant": "languages & frameworks",
+      "isNew": "FALSE",
+      "description": "..."
+    },
+    {
+      "name": "NextJS",
+      "ring": "adopt",
+      "quadrant": "languages & frameworks",
+      "isNew": "TRUE",
+      "description": "Framework React pour les applications front, version 13.*"
+    },
+    {
+      "name": "NestJS",
+      "ring": "adopt",
+      "quadrant": "languages & frameworks",
+      "isNew": "TRUE",
+      "description": "A progressive Node.js framework for building efficient, reliable and scalable server-side applications."
+    },
+    {
+      "name": "JEST",
+      "ring": "adopt",
+      "quadrant": "languages & frameworks",
+      "isNew": "TRUE",
+      "description": "JavaScript testing framework built on top of Jasmine and maintained by Meta (formerly Facebook). It was designed and built by Christoph Nakazawa with a focus on simplicity and support for large web applications"
+    },
+    {
+      "name": "Behat",
+      "ring": "adopt",
+      "quadrant": "languages & frameworks",
+      "isNew": "FALSE",
+      "description": "Behat is an open source Behavior-Driven Development framework for PHP. Version 3.4"
+    },
+    {
+      "name": "CucumberJS",
+      "ring": "adopt",
+      "quadrant": "languages & frameworks",
+      "isNew": "TRUE",
+      "description": "tool for running automated tests written in plain language. Because they're written in plain language, they can be read by anyone on your team. Because they can be read by anyone, you can use them to help improve communication, collaboration and trust on your team."
+    },
+    {
+      "name": "Cypress",
+      "ring": "adopt",
+      "quadrant": "languages & frameworks",
+      "isNew": "TRUE",
+      "description": "Fast, Easy & Reliable Testing For Anything That Runs In a Browser. Get Started For Free! Built So That Testing & Development Can Happen Simultaneously."
+    },
+    {
+      "name": "PHPUNIT",
+      "ring": "adopt",
+      "quadrant": "languages & frameworks",
+      "isNew": "FALSE",
+      "description": "PHPUnit is a programmer-oriented testing framework for PHP. It is an instance of the xUnit architecture for unit testing frameworks."
+    },
+    {
+      "name": "PHP 8.1",
+      "ring": "adopt",
+      "quadrant": "languages & frameworks",
+      "isNew": "FALSE",
+      "description": "We continue to see teams run into trouble using JSF ..."
+    },
+    {
+      "name": "Api Platform 2.7",
+      "ring": "adopt",
+      "quadrant": "languages & frameworks",
+      "isNew": "FALSE",
+      "description": "API Platform is a powerful yet easy to use full stack framework dedicated to API-driven projects and implementing the Jamstack architecture."
+    },
+    {
+      "name": "Api Platform 3.0",
+      "ring": "trial",
+      "quadrant": "languages & frameworks",
+      "isNew": "FALSE",
+      "description": "API Platform is a powerful yet easy to use full stack framework dedicated to API-driven projects and implementing the Jamstack architecture."
+    },
+    {
+      "name": "Mysql",
+      "ring": "adopt",
+      "quadrant": "languages & frameworks",
+      "isNew": "FALSE",
+      "description": "V12 Mysql 5"
+    },
+    {
+      "name": "PostgresSQL",
+      "ring": "assess",
+      "quadrant": "languages & frameworks",
+      "isNew": "FALSE",
+      "description": "V12 Mysql 5"
+    },
+    {
+      "name": "Symfony 5.*",
+      "ring": "hold",
+      "quadrant": "languages & frameworks",
+      "isNew": "FALSE",
+      "description": ""
+    },
+    {
+      "name": "Symfony 3.*",
+      "ring": "hold",
+      "quadrant": "languages & frameworks",
+      "isNew": "FALSE",
+      "description": ""
+    },
+    {
+        "name": "Symfony 4.*",
+        "ring": "hold",
+        "quadrant": "languages & frameworks",
+        "isNew": "FALSE",
+        "description": ""
+    },
+    {
+      "name": "Symfony 6.2.6",
+      "ring": "adopt",
+      "quadrant": "languages & frameworks",
+      "isNew": "FALSE",
+      "description": ""
+    },
+    {
+      "name": "Robot Framework",
+      "ring": "adopt",
+      "quadrant": "languages & frameworks",
+      "isNew": "FALSE",
+      "description": "Robot Framework is a generic open source automation framework. It can be used for test automation and robotic process automation (RPA)."
+    },
+    {
+      "name": "Sass",
+      "ring": "adopt",
+      "quadrant": "languages & frameworks",
+      "isNew": "TRUE",
+      "description": "CSS with superpowers. Sass is the most mature, stable, and powerful professional grade CSS extension language in the world."
+    }
+  ]
